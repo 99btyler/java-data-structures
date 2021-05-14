@@ -39,7 +39,7 @@ public class SinglyLinkedList {
 
     }
 
-    public final void add(int data, int index) {
+    public final void insert(int data, int index) {
 
         final Node newNode = new Node(data);
 
@@ -73,7 +73,7 @@ public class SinglyLinkedList {
 
     }
 
-    public final void delete(int data) {
+    public final void remove(int data) {
 
         if (firstNode.data == data) {
 

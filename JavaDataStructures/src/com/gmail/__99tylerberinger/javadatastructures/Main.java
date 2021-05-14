@@ -13,11 +13,11 @@ public class Main {
         singlyLinkedList.add(1);
         singlyLinkedList.add(3);
         singlyLinkedList.add(4);
-        singlyLinkedList.add(2, 1);
-        singlyLinkedList.add(0, 0);
-        singlyLinkedList.delete(0);
-        singlyLinkedList.delete(1);
-        singlyLinkedList.delete(3);
+        singlyLinkedList.insert(2, 1);
+        singlyLinkedList.insert(0, 0);
+        singlyLinkedList.remove(0);
+        singlyLinkedList.remove(1);
+        singlyLinkedList.remove(3);
 
     }
 
