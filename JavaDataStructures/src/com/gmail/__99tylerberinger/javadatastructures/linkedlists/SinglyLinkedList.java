@@ -73,6 +73,34 @@ public class SinglyLinkedList {
 
     }
 
+    public final void delete(int data) {
+
+        if (firstNode.data == data) {
+
+            firstNode = firstNode.nextNode;
+
+        } else {
+
+            Node preNodeToDelete = firstNode;
+            while (preNodeToDelete != null) {
+                if (preNodeToDelete.nextNode.data == data) {
+
+                    final Node nodeToDelete = preNodeToDelete.nextNode;
+
+                    preNodeToDelete.nextNode = nodeToDelete.nextNode;
+
+                    break;
+
+                }
+                preNodeToDelete = preNodeToDelete.nextNode;
+            }
+
+        }
+
+        printSinglyLinkedList();
+
+    }
+
     private void printSinglyLinkedList() {
 
         String string = "";

@@ -15,6 +15,9 @@ public class Main {
         singlyLinkedList.add(4);
         singlyLinkedList.add(2, 1);
         singlyLinkedList.add(0, 0);
+        singlyLinkedList.delete(0);
+        singlyLinkedList.delete(1);
+        singlyLinkedList.delete(3);
 
     }
 
