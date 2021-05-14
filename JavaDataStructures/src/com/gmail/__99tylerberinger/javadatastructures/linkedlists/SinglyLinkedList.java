@@ -117,18 +117,18 @@ public class SinglyLinkedList {
 
         } else {
 
-            Node preNodeToRemove = firstNode;
-            while (preNodeToRemove != null) {
-                if (preNodeToRemove.nextNode.data == data) {
+            Node preDataNode = firstNode;
+            while (preDataNode != null) {
+                if (preDataNode.nextNode.data == data) {
 
-                    final Node nodeToRemove = preNodeToRemove.nextNode;
+                    final Node dataNode = preDataNode.nextNode;
 
-                    preNodeToRemove.nextNode = nodeToRemove.nextNode;
+                    preDataNode.nextNode = dataNode.nextNode;
 
                     break;
 
                 }
-                preNodeToRemove = preNodeToRemove.nextNode;
+                preDataNode = preDataNode.nextNode;
             }
 
         }
@@ -145,19 +145,19 @@ public class SinglyLinkedList {
 
         } else {
 
-            Node preNodeToDelete = firstNode;
+            Node preIndexNode = firstNode;
             int i = 0;
-            while (preNodeToDelete != null) {
+            while (preIndexNode != null) {
                 if (i == index-1) {
 
-                    final Node nodeToDelete = preNodeToDelete.nextNode;
+                    final Node indexNode = preIndexNode.nextNode;
 
-                    preNodeToDelete.nextNode = nodeToDelete.nextNode;
+                    preIndexNode.nextNode = indexNode.nextNode;
 
                     break;
 
                 }
-                preNodeToDelete = preNodeToDelete.nextNode;
+                preIndexNode = preIndexNode.nextNode;
                 i += 1;
             }
 
@@ -177,14 +177,14 @@ public class SinglyLinkedList {
 
     public final boolean contains(int data) {
 
-        Node tempNode = firstNode;
-        while (tempNode != null) {
-            if (tempNode.data == data) {
+        Node dataNode = firstNode;
+        while (dataNode != null) {
+            if (dataNode.data == data) {
 
                 return true;
 
             }
-            tempNode = tempNode.nextNode;
+            dataNode = dataNode.nextNode;
         }
 
         return false;
@@ -195,10 +195,10 @@ public class SinglyLinkedList {
 
         int size = 0;
 
-        Node tempNode = firstNode;
-        while (tempNode != null) {
+        Node node = firstNode;
+        while (node != null) {
             size += 1;
-            tempNode = tempNode.nextNode;
+            node = node.nextNode;
         }
 
         return size;
@@ -209,10 +209,10 @@ public class SinglyLinkedList {
 
         String string = "";
 
-        Node tempNode = firstNode;
-        while (tempNode != null) {
-            string += (tempNode.data + " => ");
-            tempNode = tempNode.nextNode;
+        Node node = firstNode;
+        while (node != null) {
+            string += (node.data + " => ");
+            node = node.nextNode;
         }
         string += "null";
 
