@@ -81,18 +81,18 @@ public class SinglyLinkedList {
 
         } else {
 
-            Node preNodeToDelete = firstNode;
-            while (preNodeToDelete != null) {
-                if (preNodeToDelete.nextNode.data == data) {
+            Node preNodeToRemove = firstNode;
+            while (preNodeToRemove != null) {
+                if (preNodeToRemove.nextNode.data == data) {
 
-                    final Node nodeToDelete = preNodeToDelete.nextNode;
+                    final Node nodeToRemove = preNodeToRemove.nextNode;
 
-                    preNodeToDelete.nextNode = nodeToDelete.nextNode;
+                    preNodeToRemove.nextNode = nodeToRemove.nextNode;
 
                     break;
 
                 }
-                preNodeToDelete = preNodeToDelete.nextNode;
+                preNodeToRemove = preNodeToRemove.nextNode;
             }
 
         }
