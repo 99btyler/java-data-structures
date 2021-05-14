@@ -12,12 +12,11 @@ public class Main {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.add(1);
         singlyLinkedList.add(3);
-        singlyLinkedList.add(4);
         singlyLinkedList.insert(2, 1);
         singlyLinkedList.insert(0, 0);
-        singlyLinkedList.remove(0);
-        singlyLinkedList.remove(1);
+        singlyLinkedList.remove(3);
         singlyLinkedList.delete(1);
+        singlyLinkedList.clear();
 
     }
 

@@ -131,6 +131,14 @@ public class SinglyLinkedList {
 
     }
 
+    public final void clear() {
+
+        firstNode = null;
+
+        printSinglyLinkedList();
+
+    }
+
     private void printSinglyLinkedList() {
 
         String string = "";
