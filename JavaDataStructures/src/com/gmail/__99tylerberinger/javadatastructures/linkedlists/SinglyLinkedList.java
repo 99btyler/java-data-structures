@@ -139,6 +139,22 @@ public class SinglyLinkedList {
 
     }
 
+    public final boolean contains(int data) {
+
+        Node tempNode = firstNode;
+        while (tempNode != null) {
+            if (tempNode.data == data) {
+
+                return true;
+
+            }
+            tempNode = tempNode.nextNode;
+        }
+
+        return false;
+
+    }
+
     public final int size() {
 
         int size = 0;
