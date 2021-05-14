@@ -12,10 +12,12 @@ public class Main {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.add(1);
         singlyLinkedList.add(3);
+        System.out.println("Index of data 3: " +  singlyLinkedList.indexOf(3));
         System.out.println("Contains 7: " + singlyLinkedList.contains(7));
         singlyLinkedList.insert(2, 1);
         System.out.println("Size: " + singlyLinkedList.size());
         singlyLinkedList.remove(3);
+        System.out.println("Data at index 1: " + singlyLinkedList.get(1));
         singlyLinkedList.delete(1);
         singlyLinkedList.clear();
 
