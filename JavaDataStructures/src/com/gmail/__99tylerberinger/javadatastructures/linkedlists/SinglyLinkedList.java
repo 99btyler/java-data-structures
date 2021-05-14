@@ -139,6 +139,20 @@ public class SinglyLinkedList {
 
     }
 
+    public final int size() {
+
+        int size = 0;
+
+        Node tempNode = firstNode;
+        while (tempNode != null) {
+            size += 1;
+            tempNode = tempNode.nextNode;
+        }
+
+        return size;
+
+    }
+
     private void printSinglyLinkedList() {
 
         String string = "";

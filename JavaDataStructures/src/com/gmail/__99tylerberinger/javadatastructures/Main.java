@@ -13,10 +13,11 @@ public class Main {
         singlyLinkedList.add(1);
         singlyLinkedList.add(3);
         singlyLinkedList.insert(2, 1);
-        singlyLinkedList.insert(0, 0);
+        System.out.println("Size: " + singlyLinkedList.size());
         singlyLinkedList.remove(3);
         singlyLinkedList.delete(1);
         singlyLinkedList.clear();
+        System.out.println("Size: " + singlyLinkedList.size());
 
     }
 
