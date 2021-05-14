@@ -101,6 +101,36 @@ public class SinglyLinkedList {
 
     }
 
+    public final void delete(int index) {
+
+        if (index == 0) {
+
+            firstNode = firstNode.nextNode;
+
+        } else {
+
+            Node preNodeToDelete = firstNode;
+            int i = 0;
+            while (preNodeToDelete != null) {
+                if (i == index-1) {
+
+                    final Node nodeToDelete = preNodeToDelete.nextNode;
+
+                    preNodeToDelete.nextNode = nodeToDelete.nextNode;
+
+                    break;
+
+                }
+                preNodeToDelete = preNodeToDelete.nextNode;
+                i += 1;
+            }
+
+        }
+
+        printSinglyLinkedList();
+
+    }
+
     private void printSinglyLinkedList() {
 
         String string = "";
