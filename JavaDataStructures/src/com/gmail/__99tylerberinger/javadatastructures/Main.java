@@ -6,12 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("java-data-structures\n");
+        System.out.println("java-data-structures");
 
+        System.out.println("\nSinglyLinkedList");
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.add(1);
-        singlyLinkedList.add(2);
         singlyLinkedList.add(3);
+        singlyLinkedList.add(4);
+        singlyLinkedList.add(2, 1);
+        singlyLinkedList.add(0, 0);
 
     }
 

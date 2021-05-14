@@ -39,6 +39,40 @@ public class SinglyLinkedList {
 
     }
 
+    public final void add(int data, int index) {
+
+        final Node newNode = new Node(data);
+
+        if (index == 0) {
+
+            newNode.nextNode = firstNode;
+            firstNode = newNode;
+
+        } else {
+
+            Node preIndexNode = firstNode;
+            int i = 0;
+            while (preIndexNode != null) {
+                if (i == index-1) {
+
+                    final Node indexNode = preIndexNode.nextNode;
+
+                    preIndexNode.nextNode = newNode;
+                    newNode.nextNode = indexNode;
+
+                    break;
+
+                }
+                preIndexNode = preIndexNode.nextNode;
+                i += 1;
+            }
+
+        }
+
+        printSinglyLinkedList();
+
+    }
+
     private void printSinglyLinkedList() {
 
         String string = "";
