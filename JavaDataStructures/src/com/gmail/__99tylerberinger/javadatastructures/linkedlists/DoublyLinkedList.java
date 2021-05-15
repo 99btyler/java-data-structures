@@ -58,6 +58,36 @@ public class DoublyLinkedList {
 
     }
 
+    public final boolean contains(int data) {
+
+        Node dataNode = firstNode;
+        while (dataNode != null) {
+            if (dataNode.data == data) {
+
+                return true;
+
+            }
+            dataNode = dataNode.nextNode;
+        }
+
+        return false;
+
+    }
+
+    public final int size() {
+
+        int size = 0;
+
+        Node node = firstNode;
+        while (node != null) {
+            size += 1;
+            node = node.nextNode;
+        }
+
+        return size;
+
+    }
+
     private void printDoublyLinkedList() {
 
         String string = "null <=> ";

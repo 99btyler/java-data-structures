@@ -25,6 +25,8 @@ public class Main {
         System.out.println("\nDoublyLinkedList");
         final DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
         doublyLinkedList.add(17);
+        System.out.println("Contains 17: " + doublyLinkedList.contains(17));
+        System.out.println("Size: " + doublyLinkedList.size());
         doublyLinkedList.add(19);
         System.out.println("Data at index 1: " + doublyLinkedList.get(1));
 
