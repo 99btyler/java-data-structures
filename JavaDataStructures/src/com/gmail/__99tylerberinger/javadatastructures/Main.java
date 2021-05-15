@@ -1,5 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
+import com.gmail.__99tylerberinger.javadatastructures.linkedlists.DoublyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.linkedlists.SinglyLinkedList;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
         System.out.println("java-data-structures");
 
         System.out.println("\nSinglyLinkedList");
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        final SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.add(1);
         singlyLinkedList.add(3);
         System.out.println("Index of data 3: " +  singlyLinkedList.indexOf(3));
@@ -20,6 +21,12 @@ public class Main {
         System.out.println("Data at index 1: " + singlyLinkedList.get(1));
         singlyLinkedList.delete(1);
         singlyLinkedList.clear();
+
+        System.out.println("\nDoublyLinkedList");
+        final DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        doublyLinkedList.add(17);
+        doublyLinkedList.add(19);
+        System.out.println("Data at index 1: " + doublyLinkedList.get(1));
 
     }
 
