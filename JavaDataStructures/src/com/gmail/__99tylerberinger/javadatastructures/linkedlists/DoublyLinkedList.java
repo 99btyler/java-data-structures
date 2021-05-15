@@ -34,6 +34,24 @@ public class DoublyLinkedList {
 
     }
 
+    public final int indexOf(int data) {
+
+        Node dataNode = firstNode;
+        int i = 0;
+        while (dataNode != null) {
+            if (dataNode.data == data) {
+
+                return i;
+
+            }
+            dataNode = dataNode.nextNode;
+            i += 1;
+        }
+
+        return -1;
+
+    }
+
     public final void add(int data) {
 
         final Node newNode = new Node(data);
@@ -83,6 +101,39 @@ public class DoublyLinkedList {
                     indexNode.previousNode = newNode;
 
                     break;
+
+                }
+                indexNode = indexNode.nextNode;
+                i += 1;
+            }
+
+        }
+
+        printDoublyLinkedList();
+
+    }
+
+    public final void delete(int index) {
+
+        if (index == 0) {
+
+            firstNode = firstNode.nextNode;
+            firstNode.previousNode = null;
+
+        } else {
+
+            Node indexNode = firstNode;
+            int i = 0;
+            while (indexNode != null) {
+                if (i == index) {
+
+                    final Node preIndexNode = indexNode.previousNode;
+                    final Node postIndexNode = indexNode.nextNode;
+
+                    preIndexNode.nextNode = postIndexNode;
+                    if (postIndexNode != null) {
+                        postIndexNode.previousNode = preIndexNode;
+                    }
 
                 }
                 indexNode = indexNode.nextNode;

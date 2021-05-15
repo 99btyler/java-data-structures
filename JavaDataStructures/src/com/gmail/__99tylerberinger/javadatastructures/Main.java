@@ -30,6 +30,8 @@ public class Main {
         doublyLinkedList.add(19);
         System.out.println("Data at index 1: " + doublyLinkedList.get(1));
         doublyLinkedList.insert(18, 1);
+        System.out.println("Index of data 18: " + doublyLinkedList.indexOf(18));
+        doublyLinkedList.delete(doublyLinkedList.indexOf(18));
 
     }
 
