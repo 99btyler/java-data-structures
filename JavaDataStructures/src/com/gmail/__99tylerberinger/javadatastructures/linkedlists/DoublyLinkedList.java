@@ -58,6 +58,43 @@ public class DoublyLinkedList {
 
     }
 
+    public final void insert(int data, int index) {
+
+        final Node newNode = new Node(data);
+
+        if (index == 0) {
+
+            newNode.nextNode = firstNode;
+            firstNode = newNode;
+
+        } else {
+
+            Node indexNode = firstNode;
+            int i = 0;
+            while (indexNode != null) {
+                if (i == index) {
+
+                    final Node preIndexNode = indexNode.previousNode;
+
+                    preIndexNode.nextNode = newNode;
+                    newNode.previousNode = preIndexNode;
+
+                    newNode.nextNode = indexNode;
+                    indexNode.previousNode = newNode;
+
+                    break;
+
+                }
+                indexNode = indexNode.nextNode;
+                i += 1;
+            }
+
+        }
+
+        printDoublyLinkedList();
+
+    }
+
     public final boolean contains(int data) {
 
         Node dataNode = firstNode;
@@ -94,7 +131,7 @@ public class DoublyLinkedList {
 
         Node node = firstNode;
         while (node != null) {
-            string += (node.data + " <=> ");
+            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + " <=> ");
             node = node.nextNode;
         }
         string += "null";

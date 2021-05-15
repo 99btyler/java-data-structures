@@ -29,6 +29,7 @@ public class Main {
         System.out.println("Size: " + doublyLinkedList.size());
         doublyLinkedList.add(19);
         System.out.println("Data at index 1: " + doublyLinkedList.get(1));
+        doublyLinkedList.insert(18, 1);
 
     }
 
