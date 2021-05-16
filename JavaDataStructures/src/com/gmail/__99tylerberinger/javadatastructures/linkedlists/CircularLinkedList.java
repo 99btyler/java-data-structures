@@ -110,11 +110,11 @@ public class CircularLinkedList {
                     newNode.nextNode = indexNode;
 
                 }
-                if (preIndexNode.nextNode == firstNode) {
-                    break;
-                }
                 preIndexNode = preIndexNode.nextNode;
                 i += 1;
+                if (preIndexNode == firstNode) {
+                    break;
+                }
             }
 
         }
@@ -132,10 +132,10 @@ public class CircularLinkedList {
                 return true;
 
             }
-            if (dataNode.nextNode == firstNode) {
+            dataNode = dataNode.nextNode;
+            if (dataNode == firstNode) {
                 break;
             }
-            dataNode = dataNode.nextNode;
         }
 
         return false;
@@ -149,10 +149,10 @@ public class CircularLinkedList {
         Node node = firstNode;
         while (node != null) {
             size += 1;
-            if (node.nextNode == firstNode) {
+            node = node.nextNode;
+            if (node == firstNode) {
                 break;
             }
-            node = node.nextNode;
         }
 
         return size;
@@ -166,10 +166,10 @@ public class CircularLinkedList {
         Node node  = firstNode;
         while (node != null) {
             string += (node.data + (node.nextNode == firstNode ? " => [" + node.nextNode.data + "]" : " => "));
-            if (node.nextNode == firstNode) {
+            node = node.nextNode;
+            if (node == firstNode) {
                 break;
             }
-            node = node.nextNode;
         }
 
         System.out.println(string);
