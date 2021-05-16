@@ -15,6 +15,48 @@ public class CircularLinkedList {
 
     private Node firstNode = null;
 
+    public final int get(int index) {
+
+        Node indexNode = firstNode;
+        int i = 0;
+        while (indexNode != null) {
+            if (i == index) {
+
+                return indexNode.data;
+
+            }
+            indexNode = indexNode.nextNode;
+            i += 1;
+            if (indexNode == firstNode) {
+                break;
+            }
+        }
+
+        return -1;
+
+    }
+
+    public final int indexOf(int data) {
+
+        Node dataNode = firstNode;
+        int i = 0;
+        while (dataNode != null) {
+            if (dataNode.data == data) {
+
+                return i;
+
+            }
+            dataNode = dataNode.nextNode;
+            i += 1;
+            if (dataNode == firstNode) {
+                break;
+            }
+        }
+
+        return -1;
+
+    }
+
     public final void add(int data) {
 
         final Node newNode = new Node(data);

@@ -39,10 +39,12 @@ public class Main {
         System.out.println("\nCircularLinkedList");
         final CircularLinkedList circularLinkedList = new CircularLinkedList();
         circularLinkedList.add(2020);
+        System.out.println("Data at index 0: " + circularLinkedList.get(0));
         circularLinkedList.add(2022);
         System.out.println("Size: " + circularLinkedList.size());
         circularLinkedList.insert(2021, 1);
         System.out.println("Contains 2020: " + circularLinkedList.contains(2020));
+        System.out.println("Index of data 2020: " + circularLinkedList.indexOf(2020));
 
     }
 
