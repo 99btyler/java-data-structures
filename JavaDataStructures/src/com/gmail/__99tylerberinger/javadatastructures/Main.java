@@ -39,8 +39,8 @@ public class Main {
         System.out.println("\nCircularLinkedList");
         final CircularLinkedList circularLinkedList = new CircularLinkedList();
         circularLinkedList.add(2020);
-        circularLinkedList.add(2021);
         circularLinkedList.add(2022);
+        circularLinkedList.insert(2021, 1);
 
     }
 
