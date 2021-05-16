@@ -81,6 +81,42 @@ public class CircularLinkedList {
 
     }
 
+    public final boolean contains(int data) {
+
+        Node dataNode = firstNode;
+        while (dataNode != null) {
+            if (dataNode.data == data) {
+
+                return true;
+
+            }
+            if (dataNode.nextNode == firstNode) {
+                break;
+            }
+            dataNode = dataNode.nextNode;
+        }
+
+        return false;
+
+    }
+
+    public final int size() {
+
+        int size = 0;
+
+        Node node = firstNode;
+        while (node != null) {
+            size += 1;
+            if (node.nextNode == firstNode) {
+                break;
+            }
+            node = node.nextNode;
+        }
+
+        return size;
+
+    }
+
     private void printCircularLinkedList() {
 
         String string = "";

@@ -40,7 +40,9 @@ public class Main {
         final CircularLinkedList circularLinkedList = new CircularLinkedList();
         circularLinkedList.add(2020);
         circularLinkedList.add(2022);
+        System.out.println("Size: " + circularLinkedList.size());
         circularLinkedList.insert(2021, 1);
+        System.out.println("Contains 2020: " + circularLinkedList.contains(2020));
 
     }
 
