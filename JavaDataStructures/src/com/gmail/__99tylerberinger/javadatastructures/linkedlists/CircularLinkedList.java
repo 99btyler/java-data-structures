@@ -123,6 +123,88 @@ public class CircularLinkedList {
 
     }
 
+    public final void remove(int data) {
+
+        if (firstNode.data == data) {
+
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
+            firstNode = firstNode.nextNode;
+            lastNode.nextNode = firstNode;
+
+        } else {
+
+            Node preDataNode = firstNode;
+            while (preDataNode != null) {
+                if (preDataNode.nextNode.data == data) {
+
+                    final Node dataNode = preDataNode.nextNode;
+
+                    preDataNode.nextNode = dataNode.nextNode;
+
+                    break;
+
+                }
+                preDataNode = preDataNode.nextNode;
+                if (preDataNode == firstNode) {
+                    break;
+                }
+            }
+
+        }
+
+        printCircularLinkedList();
+
+    }
+
+    public final void delete(int index) {
+
+        if (index == 0) {
+
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
+            firstNode = firstNode.nextNode;
+            lastNode.nextNode = firstNode;
+
+        } else {
+
+            Node preIndexNode = firstNode;
+            int i = 0;
+            while (preIndexNode != null) {
+                if (i == index-1) {
+
+                    final Node indexNode = preIndexNode.nextNode;
+
+                    preIndexNode.nextNode = indexNode.nextNode;
+
+                }
+                preIndexNode = preIndexNode.nextNode;
+                i += 1;
+                if (preIndexNode == firstNode) {
+                    break;
+                }
+            }
+
+        }
+
+        printCircularLinkedList();
+
+    }
+
+    public final void clear() {
+
+        firstNode = null;
+
+        printCircularLinkedList();
+
+    }
+
     public final boolean contains(int data) {
 
         Node dataNode = firstNode;
@@ -172,7 +254,7 @@ public class CircularLinkedList {
             }
         }
 
-        System.out.println(string);
+        System.out.println(string == "" ? "null" : string);
 
     }
 

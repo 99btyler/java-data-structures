@@ -45,6 +45,9 @@ public class Main {
         circularLinkedList.insert(2021, 1);
         System.out.println("Contains 2020: " + circularLinkedList.contains(2020));
         System.out.println("Index of data 2020: " + circularLinkedList.indexOf(2020));
+        circularLinkedList.remove(2022);
+        circularLinkedList.delete(1);
+        circularLinkedList.clear();
 
     }
 
