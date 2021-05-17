@@ -78,7 +78,7 @@ public class CircularSinglyLinkedList {
 
         }
 
-        printCircularLinkedList();
+        printCircularSinglyLinkedList();
 
     }
 
@@ -119,7 +119,7 @@ public class CircularSinglyLinkedList {
 
         }
 
-        printCircularLinkedList();
+        printCircularSinglyLinkedList();
 
     }
 
@@ -156,7 +156,7 @@ public class CircularSinglyLinkedList {
 
         }
 
-        printCircularLinkedList();
+        printCircularSinglyLinkedList();
 
     }
 
@@ -193,7 +193,7 @@ public class CircularSinglyLinkedList {
 
         }
 
-        printCircularLinkedList();
+        printCircularSinglyLinkedList();
 
     }
 
@@ -201,7 +201,7 @@ public class CircularSinglyLinkedList {
 
         firstNode = null;
 
-        printCircularLinkedList();
+        printCircularSinglyLinkedList();
 
     }
 
@@ -241,7 +241,7 @@ public class CircularSinglyLinkedList {
 
     }
 
-    private void printCircularLinkedList() {
+    private void printCircularSinglyLinkedList() {
 
         String string = "";
 
