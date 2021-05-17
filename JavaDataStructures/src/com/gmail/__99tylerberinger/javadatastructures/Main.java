@@ -53,8 +53,10 @@ public class Main {
         System.out.println("\nCircularDoublyLinkedList");
         final CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
         circularDoublyLinkedList.add(1);
+        System.out.println("Index of data 1: " + circularDoublyLinkedList.indexOf(1));
         circularDoublyLinkedList.add(3);
         circularDoublyLinkedList.insert(2, 1);
+        System.out.println("Data at index 1: " + circularDoublyLinkedList.get(1));
 
     }
 
