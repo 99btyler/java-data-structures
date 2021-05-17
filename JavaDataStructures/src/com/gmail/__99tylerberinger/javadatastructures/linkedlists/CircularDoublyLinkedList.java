@@ -45,6 +45,55 @@ public class CircularDoublyLinkedList {
 
     }
 
+    public final void insert(int data, int index) {
+
+        final Node newNode = new Node(data);
+
+        if (index == 0) {
+
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
+            lastNode.nextNode = newNode;
+            newNode.previousNode = lastNode;
+
+            newNode.nextNode = firstNode;
+            firstNode.previousNode = newNode;
+            firstNode = newNode;
+
+        } else {
+
+            Node indexNode = firstNode;
+            int i = 0;
+            while (indexNode != null) {
+                if (i == index) {
+
+                    final Node preIndexNode = indexNode.previousNode;
+
+                    preIndexNode.nextNode = newNode;
+                    newNode.previousNode = preIndexNode;
+
+                    newNode.nextNode = indexNode;
+                    indexNode.previousNode = newNode;
+
+                    break;
+
+                }
+                indexNode = indexNode.nextNode;
+                i += 1;
+                if (indexNode == firstNode) {
+                    break;
+                }
+            }
+
+        }
+
+        printCircularDoublyLinkedList();
+
+    }
+
     private void printCircularDoublyLinkedList() {
 
         String string = "";

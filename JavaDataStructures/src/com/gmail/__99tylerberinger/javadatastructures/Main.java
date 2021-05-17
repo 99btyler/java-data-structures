@@ -54,6 +54,7 @@ public class Main {
         final CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
         circularDoublyLinkedList.add(1);
         circularDoublyLinkedList.add(3);
+        circularDoublyLinkedList.insert(2, 1);
 
     }
 
