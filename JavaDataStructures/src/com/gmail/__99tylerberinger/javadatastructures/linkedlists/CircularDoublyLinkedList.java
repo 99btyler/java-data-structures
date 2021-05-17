@@ -35,6 +35,7 @@ public class CircularDoublyLinkedList {
 
             lastNode.nextNode = newNode;
             newNode.previousNode = lastNode;
+
             newNode.nextNode = firstNode;
             firstNode.previousNode = newNode;
 
