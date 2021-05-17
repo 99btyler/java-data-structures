@@ -1,6 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
-import com.gmail.__99tylerberinger.javadatastructures.linkedlists.CircularLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.linkedlists.CircularSinglyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.linkedlists.DoublyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.linkedlists.SinglyLinkedList;
 
@@ -37,17 +37,17 @@ public class Main {
         doublyLinkedList.clear();
 
         System.out.println("\nCircularLinkedList");
-        final CircularLinkedList circularLinkedList = new CircularLinkedList();
-        circularLinkedList.add(2020);
-        System.out.println("Data at index 0: " + circularLinkedList.get(0));
-        circularLinkedList.add(2022);
-        System.out.println("Size: " + circularLinkedList.size());
-        circularLinkedList.insert(2021, 1);
-        System.out.println("Contains 2020: " + circularLinkedList.contains(2020));
-        System.out.println("Index of data 2020: " + circularLinkedList.indexOf(2020));
-        circularLinkedList.remove(2022);
-        circularLinkedList.delete(1);
-        circularLinkedList.clear();
+        final CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
+        circularSinglyLinkedList.add(2020);
+        System.out.println("Data at index 0: " + circularSinglyLinkedList.get(0));
+        circularSinglyLinkedList.add(2022);
+        System.out.println("Size: " + circularSinglyLinkedList.size());
+        circularSinglyLinkedList.insert(2021, 1);
+        System.out.println("Contains 2020: " + circularSinglyLinkedList.contains(2020));
+        System.out.println("Index of data 2020: " + circularSinglyLinkedList.indexOf(2020));
+        circularSinglyLinkedList.remove(2022);
+        circularSinglyLinkedList.delete(1);
+        circularSinglyLinkedList.clear();
 
     }
 

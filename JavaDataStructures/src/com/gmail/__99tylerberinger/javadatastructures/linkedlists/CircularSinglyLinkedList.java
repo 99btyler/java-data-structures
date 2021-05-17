@@ -1,6 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures.linkedlists;
 
-public class CircularLinkedList {
+public class CircularSinglyLinkedList {
 
     private class Node {
 
