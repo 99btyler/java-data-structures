@@ -1,5 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
+import com.gmail.__99tylerberinger.javadatastructures.linkedlists.CircularDoublyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.linkedlists.CircularSinglyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.linkedlists.DoublyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.linkedlists.SinglyLinkedList;
@@ -36,7 +37,7 @@ public class Main {
         doublyLinkedList.remove(17);
         doublyLinkedList.clear();
 
-        System.out.println("\nCircularLinkedList");
+        System.out.println("\nCircularSinglyLinkedList");
         final CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
         circularSinglyLinkedList.add(2020);
         System.out.println("Data at index 0: " + circularSinglyLinkedList.get(0));
@@ -48,6 +49,11 @@ public class Main {
         circularSinglyLinkedList.remove(2022);
         circularSinglyLinkedList.delete(1);
         circularSinglyLinkedList.clear();
+
+        System.out.println("\nCircularDoublyLinkedList");
+        final CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
+        circularDoublyLinkedList.add(1);
+        circularDoublyLinkedList.add(3);
 
     }
 
