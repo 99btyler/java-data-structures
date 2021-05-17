@@ -247,7 +247,7 @@ public class CircularSinglyLinkedList {
 
         Node node  = firstNode;
         while (node != null) {
-            string += (node.data + (node.nextNode == firstNode ? " => [" + node.nextNode.data + "]" : " => "));
+            string += (node.data + (node.nextNode == firstNode ? " => {" + node.nextNode.data + "}" : " => "));
             node = node.nextNode;
             if (node == firstNode) {
                 break;

@@ -50,7 +50,7 @@ public class CircularDoublyLinkedList {
 
         Node node = firstNode;
         while (node != null) {
-            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + (node.nextNode == firstNode ? " <=> {" + node.nextNode.data + "}" : " => "));
+            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + (node.nextNode == firstNode ? " <=> {" + node.nextNode.data + "}" : " <=> "));
             node = node.nextNode;
             if (node == firstNode) {
                 break;
