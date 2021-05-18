@@ -136,6 +136,42 @@ public class CircularDoublyLinkedList {
 
     }
 
+    public final boolean contains(int data) {
+
+        Node dataNode = firstNode;
+        while (dataNode != null) {
+            if (dataNode.data == data) {
+
+                return true;
+
+            }
+            dataNode = dataNode.nextNode;
+            if (dataNode == firstNode) {
+                break;
+            }
+        }
+
+        return false;
+
+    }
+
+    public final int size() {
+
+        int size = 0;
+
+        Node node = firstNode;
+        while (node != null) {
+            size += 1;
+            node = node.nextNode;
+            if (node == firstNode) {
+                break;
+            }
+        }
+
+        return size;
+
+    }
+
     private void printCircularDoublyLinkedList() {
 
         String string = "";

@@ -55,8 +55,10 @@ public class Main {
         circularDoublyLinkedList.add(1);
         System.out.println("Index of data 1: " + circularDoublyLinkedList.indexOf(1));
         circularDoublyLinkedList.add(3);
+        System.out.println("Contains 2: " + circularDoublyLinkedList.contains(2));
         circularDoublyLinkedList.insert(2, 1);
         System.out.println("Data at index 1: " + circularDoublyLinkedList.get(1));
+        System.out.println("Size: " + circularDoublyLinkedList.size());
 
     }
 
