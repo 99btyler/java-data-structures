@@ -1,4 +1,4 @@
-package com.gmail.__99tylerberinger.javadatastructures.linkedlists;
+package com.gmail.__99tylerberinger.javadatastructures.things.linkedlists;
 
 public class DoublyLinkedList {
 

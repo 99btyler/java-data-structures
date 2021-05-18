@@ -1,11 +1,12 @@
-package com.gmail.__99tylerberinger.javadatastructures.linkedlists;
+package com.gmail.__99tylerberinger.javadatastructures.things.linkedlists;
 
-public class CircularSinglyLinkedList {
+public class CircularDoublyLinkedList {
 
     private class Node {
 
         public int data;
-        public Node nextNode;
+        public Node nextNode = null;
+        public Node previousNode = null;
 
         public Node(int data) {
             this.data = data;
@@ -65,6 +66,7 @@ public class CircularSinglyLinkedList {
 
             firstNode = newNode;
             firstNode.nextNode = firstNode;
+            firstNode.previousNode = firstNode;
 
         } else {
 
@@ -74,11 +76,14 @@ public class CircularSinglyLinkedList {
             }
 
             lastNode.nextNode = newNode;
+            newNode.previousNode = lastNode;
+
             newNode.nextNode = firstNode;
+            firstNode.previousNode = newNode;
 
         }
 
-        printCircularSinglyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -94,32 +99,40 @@ public class CircularSinglyLinkedList {
             }
 
             lastNode.nextNode = newNode;
+            newNode.previousNode = lastNode;
+
             newNode.nextNode = firstNode;
+            firstNode.previousNode = newNode;
             firstNode = newNode;
 
         } else {
 
-            Node preIndexNode = firstNode;
+            Node indexNode = firstNode;
             int i = 0;
-            while (preIndexNode != null) {
-                if (i == index-1) {
+            while (indexNode != null) {
+                if (i == index) {
 
-                    final Node indexNode = preIndexNode.nextNode;
+                    final Node preIndexNode = indexNode.previousNode;
 
                     preIndexNode.nextNode = newNode;
+                    newNode.previousNode = preIndexNode;
+
                     newNode.nextNode = indexNode;
+                    indexNode.previousNode = newNode;
+
+                    break;
 
                 }
-                preIndexNode = preIndexNode.nextNode;
+                indexNode = indexNode.nextNode;
                 i += 1;
-                if (preIndexNode == firstNode) {
+                if (indexNode == firstNode) {
                     break;
                 }
             }
 
         }
 
-        printCircularSinglyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -134,29 +147,32 @@ public class CircularSinglyLinkedList {
 
             firstNode = firstNode.nextNode;
             lastNode.nextNode = firstNode;
+            firstNode.previousNode = lastNode;
 
         } else {
 
-            Node preDataNode = firstNode;
-            while (preDataNode != null) {
-                if (preDataNode.nextNode.data == data) {
+            Node dataNode = firstNode;
+            while (dataNode != null) {
+                if (dataNode.data == data) {
 
-                    final Node dataNode = preDataNode.nextNode;
+                    final Node preDataNode = dataNode.previousNode;
+                    final Node postDataNode = dataNode.nextNode;
 
-                    preDataNode.nextNode = dataNode.nextNode;
+                    preDataNode.nextNode = postDataNode;
+                    postDataNode.previousNode = preDataNode;
 
                     break;
 
                 }
-                preDataNode = preDataNode.nextNode;
-                if (preDataNode == firstNode) {
+                dataNode = dataNode.nextNode;
+                if (dataNode == firstNode) {
                     break;
                 }
             }
 
         }
 
-        printCircularSinglyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -171,29 +187,34 @@ public class CircularSinglyLinkedList {
 
             firstNode = firstNode.nextNode;
             lastNode.nextNode = firstNode;
+            firstNode.previousNode = lastNode;
 
         } else {
 
-            Node preIndexNode = firstNode;
+            Node indexNode = firstNode;
             int i = 0;
-            while (preIndexNode != null) {
-                if (i == index-1) {
+            while (indexNode != null) {
+                if (i == index) {
 
-                    final Node indexNode = preIndexNode.nextNode;
+                    final Node preIndexNode = indexNode.previousNode;
+                    final Node postIndexNode = indexNode.nextNode;
 
-                    preIndexNode.nextNode = indexNode.nextNode;
+                    preIndexNode.nextNode = postIndexNode;
+                    postIndexNode.previousNode = preIndexNode;
+
+                    break;
 
                 }
-                preIndexNode = preIndexNode.nextNode;
+                indexNode = indexNode.nextNode;
                 i += 1;
-                if (preIndexNode == firstNode) {
+                if (indexNode == firstNode) {
                     break;
                 }
             }
 
         }
 
-        printCircularSinglyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -201,7 +222,7 @@ public class CircularSinglyLinkedList {
 
         firstNode = null;
 
-        printCircularSinglyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -241,13 +262,13 @@ public class CircularSinglyLinkedList {
 
     }
 
-    private void printCircularSinglyLinkedList() {
+    private void printCircularDoublyLinkedList() {
 
         String string = "";
 
-        Node node  = firstNode;
+        Node node = firstNode;
         while (node != null) {
-            string += (node.data + (node.nextNode == firstNode ? " => {" + node.nextNode.data + "}" : " => "));
+            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + (node.nextNode == firstNode ? " <=> {" + node.nextNode.data + "}" : " <=> "));
             node = node.nextNode;
             if (node == firstNode) {
                 break;

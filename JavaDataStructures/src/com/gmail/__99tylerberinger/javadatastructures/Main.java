@@ -1,9 +1,9 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
-import com.gmail.__99tylerberinger.javadatastructures.linkedlists.CircularDoublyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.linkedlists.CircularSinglyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.linkedlists.DoublyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.linkedlists.SinglyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularDoublyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularSinglyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.DoublyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.SinglyLinkedList;
 
 public class Main {
 
