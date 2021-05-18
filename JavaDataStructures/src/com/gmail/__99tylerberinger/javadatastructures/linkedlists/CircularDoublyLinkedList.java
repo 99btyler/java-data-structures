@@ -136,6 +136,96 @@ public class CircularDoublyLinkedList {
 
     }
 
+    public final void remove(int data) {
+
+        if (firstNode.data == data) {
+
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
+            firstNode = firstNode.nextNode;
+            lastNode.nextNode = firstNode;
+            firstNode.previousNode = lastNode;
+
+        } else {
+
+            Node dataNode = firstNode;
+            while (dataNode != null) {
+                if (dataNode.data == data) {
+
+                    final Node preDataNode = dataNode.previousNode;
+                    final Node postDataNode = dataNode.nextNode;
+
+                    preDataNode.nextNode = postDataNode;
+                    postDataNode.previousNode = preDataNode;
+
+                    break;
+
+                }
+                dataNode = dataNode.nextNode;
+                if (dataNode == firstNode) {
+                    break;
+                }
+            }
+
+        }
+
+        printCircularDoublyLinkedList();
+
+    }
+
+    public final void delete(int index) {
+
+        if (index == 0) {
+
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
+            firstNode = firstNode.nextNode;
+            lastNode.nextNode = firstNode;
+            firstNode.previousNode = lastNode;
+
+        } else {
+
+            Node indexNode = firstNode;
+            int i = 0;
+            while (indexNode != null) {
+                if (i == index) {
+
+                    final Node preIndexNode = indexNode.previousNode;
+                    final Node postIndexNode = indexNode.nextNode;
+
+                    preIndexNode.nextNode = postIndexNode;
+                    postIndexNode.previousNode = preIndexNode;
+
+                    break;
+
+                }
+                indexNode = indexNode.nextNode;
+                i += 1;
+                if (indexNode == firstNode) {
+                    break;
+                }
+            }
+
+        }
+
+        printCircularDoublyLinkedList();
+
+    }
+
+    public final void clear() {
+
+        firstNode = null;
+
+        printCircularDoublyLinkedList();
+
+    }
+
     public final boolean contains(int data) {
 
         Node dataNode = firstNode;
@@ -185,7 +275,7 @@ public class CircularDoublyLinkedList {
             }
         }
 
-        System.out.println(string);
+        System.out.println(string == "" ? "null" : string);
 
     }
 

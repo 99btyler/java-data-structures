@@ -59,6 +59,9 @@ public class Main {
         circularDoublyLinkedList.insert(2, 1);
         System.out.println("Data at index 1: " + circularDoublyLinkedList.get(1));
         System.out.println("Size: " + circularDoublyLinkedList.size());
+        circularDoublyLinkedList.remove(2);
+        circularDoublyLinkedList.delete(0);
+        circularDoublyLinkedList.clear();
 
     }
 
