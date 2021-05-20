@@ -34,15 +34,33 @@ public class Stack {
 
     }
 
+    public final int pop() {
+
+        if (firstNode != null) {
+
+            final int poppedData = firstNode.data;
+            firstNode = firstNode.nextNode;
+
+            printStack();
+
+            return poppedData;
+
+        }
+
+        return -1;
+
+    }
+
     private void printStack() {
 
-        String string = (firstNode == null ? "null" : firstNode.data + " ... ");
+        String string = "";
 
-        Node node = firstNode.nextNode;
+        Node node = firstNode;
         while (node != null) {
-            string += (node.data + " ");
+            string += (node.data + " => ");
             node = node.nextNode;
         }
+        string += "null";
 
         System.out.println(string);
 

@@ -69,6 +69,9 @@ public class Main {
         stack.push(1);
         stack.push(2);
         stack.push(3);
+        System.out.println("Popped data: " + stack.pop());
+        System.out.println("Popped data: " + stack.pop());
+        System.out.println("Popped data: " + stack.pop());
 
     }
 
