@@ -1,5 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
+import com.gmail.__99tylerberinger.javadatastructures.things.Stack;
 import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularDoublyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularSinglyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.DoublyLinkedList;
@@ -62,6 +63,12 @@ public class Main {
         circularDoublyLinkedList.remove(2);
         circularDoublyLinkedList.delete(0);
         circularDoublyLinkedList.clear();
+
+        System.out.println("\nStack");
+        final Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
 
     }
 
