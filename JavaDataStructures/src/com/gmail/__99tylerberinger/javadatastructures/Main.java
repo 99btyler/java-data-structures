@@ -1,5 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
+import com.gmail.__99tylerberinger.javadatastructures.things.Queue;
 import com.gmail.__99tylerberinger.javadatastructures.things.Stack;
 import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularDoublyLinkedList;
 import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularSinglyLinkedList;
@@ -75,6 +76,12 @@ public class Main {
         stack.pop();
         System.out.println("Size: " + stack.size());
         stack.clear();
+
+        System.out.println("\nQueue");
+        final Queue queue = new Queue();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
 
     }
 
