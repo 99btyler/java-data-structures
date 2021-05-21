@@ -81,7 +81,10 @@ public class Main {
         final Queue queue = new Queue();
         queue.add(1);
         queue.add(2);
+        System.out.println("Peek: " + queue.peek());
         queue.add(3);
+        queue.remove();
+        queue.clear();
 
     }
 

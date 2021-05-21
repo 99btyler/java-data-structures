@@ -16,6 +16,10 @@ public class Queue {
     private Node firstNode = null;
     private Node lastNode = null;
 
+    public final int peek() {
+        return (firstNode != null ? firstNode.data : -1);
+    }
+
     public final void add(int data) {
 
         final Node newNode = new Node(data);
@@ -31,6 +35,31 @@ public class Queue {
             lastNode = newNode;
 
         }
+
+        printQueue();
+
+    }
+
+    public int remove() {
+
+        if (firstNode != null) {
+
+            final int removedData = firstNode.data;
+            firstNode = firstNode.nextNode;
+
+            printQueue();
+
+            return removedData;
+
+        }
+
+        return -1;
+
+    }
+
+    public final void clear() {
+
+        firstNode = null;
 
         printQueue();
 
