@@ -68,13 +68,10 @@ public class Main {
         System.out.println("\nStack");
         final Stack stack = new Stack();
         stack.push(1);
-        System.out.println("Contains 1: " + stack.contains(1));
         stack.push(2);
         System.out.println("Peek: " + stack.peek());
         stack.push(3);
-        System.out.println("Index of data 2: " + stack.indexOf(2));
         stack.pop();
-        System.out.println("Size: " + stack.size());
         stack.clear();
 
         System.out.println("\nQueue");
