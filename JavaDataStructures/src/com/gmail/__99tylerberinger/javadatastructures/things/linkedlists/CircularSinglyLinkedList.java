@@ -5,7 +5,7 @@ public class CircularSinglyLinkedList {
     private class Node {
 
         public int data;
-        public Node nextNode;
+        public Node nextNode = null;
 
         public Node(int data) {
             this.data = data;
