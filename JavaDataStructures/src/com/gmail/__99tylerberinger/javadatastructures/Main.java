@@ -77,13 +77,10 @@ public class Main {
         System.out.println("\nQueue");
         final Queue queue = new Queue();
         queue.add(1);
-        System.out.println("Index of data 1: " + queue.indexOf(1));
         queue.add(2);
         System.out.println("Peek: " + queue.peek());
-        System.out.println("Contains 3: " + queue.contains(3));
         queue.add(3);
-        System.out.println("Size: " + queue.size());
-        queue.remove();
+        queue.pop();
         queue.clear();
 
     }

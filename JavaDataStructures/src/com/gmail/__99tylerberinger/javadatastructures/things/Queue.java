@@ -20,24 +20,6 @@ public class Queue {
         return (firstNode != null ? firstNode.data : -1);
     }
 
-    public final int indexOf(int data) {
-
-        Node dataNode = firstNode;
-        int i = 0;
-        while (dataNode != null) {
-            if (dataNode.data == data) {
-
-                return i;
-
-            }
-            dataNode = dataNode.nextNode;
-            i += 1;
-        }
-
-        return -1;
-
-    }
-
     public final void add(int data) {
 
         final Node newNode = new Node(data);
@@ -58,7 +40,7 @@ public class Queue {
 
     }
 
-    public int remove() {
+    public int pop() {
 
         if (firstNode != null) {
 
@@ -80,36 +62,6 @@ public class Queue {
         firstNode = null;
 
         printQueue();
-
-    }
-
-    public final boolean contains(int data) {
-
-        Node dataNode = firstNode;
-        while (dataNode != null) {
-            if (dataNode.data == data) {
-
-                return true;
-
-            }
-            dataNode = dataNode.nextNode;
-        }
-
-        return false;
-
-    }
-
-    public final int size() {
-
-        int size = 0;
-
-        Node node = firstNode;
-        while (node != null) {
-            size += 1;
-            node = node.nextNode;
-        }
-
-        return size;
 
     }
 
