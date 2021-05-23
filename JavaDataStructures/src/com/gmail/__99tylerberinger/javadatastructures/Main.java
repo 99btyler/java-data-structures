@@ -1,5 +1,6 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
+import com.gmail.__99tylerberinger.javadatastructures.things.BinarySearchTree;
 import com.gmail.__99tylerberinger.javadatastructures.things.Queue;
 import com.gmail.__99tylerberinger.javadatastructures.things.Stack;
 import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularDoublyLinkedList;
@@ -82,6 +83,9 @@ public class Main {
         queue.add(3);
         queue.pop();
         queue.clear();
+
+        System.out.println("\nBinarySearchTree");
+        final BinarySearchTree binarySearchTree = new BinarySearchTree();
 
     }
 
