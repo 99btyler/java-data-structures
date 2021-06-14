@@ -86,6 +86,11 @@ public class Main {
 
         System.out.println("\nBinarySearchTree");
         final BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(30);
+        binarySearchTree.insert(40);
+        binarySearchTree.insert(5);
 
     }
 
