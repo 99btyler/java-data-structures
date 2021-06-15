@@ -45,6 +45,59 @@ public class BinarySearchTree {
 
     }
 
+    public final void delete(int data) {
+
+        firstNode = delete(firstNode, data);
+
+        printBinarySearchTree();
+
+    }
+
+    // Recursive method
+    private Node delete(Node startingNode, int data) {
+
+        if (startingNode == null) {
+
+            return startingNode; // stop recursive calls
+
+        } else {
+
+            if (data < startingNode.data) {
+                startingNode.leftChildNode = delete(startingNode.leftChildNode, data);
+            } else if (data > startingNode.data) {
+                startingNode.rightChildNode = delete(startingNode.rightChildNode, data);
+            } else {
+
+                // THIS IS THE NODE TO DELETE!
+
+                // has 0 or 1 children
+                if (startingNode.leftChildNode == null) {
+                    return startingNode.rightChildNode; // stop recursive calls
+                } else if (startingNode.rightChildNode == null) {
+                    return startingNode.leftChildNode; // stop recursive calls
+                }
+
+                // has 2 children
+                startingNode.data = getSmallestData(startingNode.rightChildNode);
+                startingNode.rightChildNode = delete(startingNode.rightChildNode, startingNode.data);
+
+            }
+
+        }
+
+        return startingNode; // stop recursive calls
+
+    }
+
+    private int getSmallestData(Node startingNode) {
+        int smallestData = startingNode.data;
+        while (startingNode.leftChildNode != null) {
+            startingNode = startingNode.leftChildNode;
+            smallestData = startingNode.data;
+        }
+        return smallestData;
+    }
+
     private void printBinarySearchTree() {
 
         printBinarySearchTree(firstNode);

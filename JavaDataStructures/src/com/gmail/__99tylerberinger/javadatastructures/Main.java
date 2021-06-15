@@ -91,6 +91,8 @@ public class Main {
         binarySearchTree.insert(30);
         binarySearchTree.insert(40);
         binarySearchTree.insert(5);
+        binarySearchTree.insert(11);
+        binarySearchTree.delete(10);
 
     }
 
