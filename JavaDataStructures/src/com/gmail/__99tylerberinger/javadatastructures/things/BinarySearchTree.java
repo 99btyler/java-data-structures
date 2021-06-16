@@ -16,6 +16,37 @@ public class BinarySearchTree {
 
     private Node firstNode = null;
 
+    public final Node search(int data) {
+
+        final Node node = search(firstNode, data);
+
+        System.out.println("Found: " + (node != null ? node.data : "nothing"));
+
+        return node;
+
+    }
+
+    // Recursive method
+    private Node search(Node node, int data) {
+
+        if (node == null || node.data == data) {
+
+            return node; // stop recursive calls
+
+        } else {
+
+            if (data < node.data) {
+                return search(node.leftChildNode, data);
+            } else if (data > node.data) {
+                return search(node.rightChildNode, data);
+            }
+
+            return node; // stop recursive calls
+
+        }
+
+    }
+
     public final void insert(int data) {
 
         firstNode = insert(firstNode, data);
