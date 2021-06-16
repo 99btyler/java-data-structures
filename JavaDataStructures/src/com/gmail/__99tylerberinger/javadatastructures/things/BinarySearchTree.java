@@ -120,9 +120,9 @@ public class BinarySearchTree {
 
             }
 
-        }
+            return node; // stop recursive calls
 
-        return node; // stop recursive calls
+        }
 
     }
 
