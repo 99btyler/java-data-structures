@@ -10,7 +10,11 @@ Get this project set up locally
 # More Info
 What is included
 
-* SinglyLinkedList, DoublyLinkedList, CircularSinglyLinkedList, CircularDoublyLinkedList
+* BinarySearchTree
+  * search(int data)
+  * insert(int data)
+  * delete(int data)
+* CircularDoublyLinkedList, CircularSinglyLinkedList, DoublyLinkedList, SinglyLinkedList
   * get(int index)
   * indexOf(int data)
   * add(int data)
@@ -20,13 +24,13 @@ What is included
   * clear()
   * contains(int data)
   * size()
-* Stack
-  * peek()
-  * push(int data)
-  * pop()
-  * clear()
 * Queue
   * peek()
   * add(int data)
+  * pop()
+  * clear()
+* Stack
+  * peek()
+  * push(int data)
   * pop()
   * clear()
