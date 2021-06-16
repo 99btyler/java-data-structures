@@ -78,8 +78,8 @@ public class BinarySearchTree {
                 }
 
                 // has 2 children
-                startingNode.data = getSmallestData(startingNode.rightChildNode);
-                startingNode.rightChildNode = delete(startingNode.rightChildNode, startingNode.data);
+                startingNode.data = getSmallestData(startingNode.leftChildNode);
+                startingNode.leftChildNode = delete(startingNode.leftChildNode, startingNode.data);
 
             }
 
