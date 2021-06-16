@@ -1,6 +1,6 @@
-package com.gmail.__99tylerberinger.javadatastructures.things.linkedlists;
+package com.gmail.__99tylerberinger.javadatastructures.things;
 
-public class DoublyLinkedList {
+public class CircularDoublyLinkedList {
 
     private class Node {
 
@@ -28,6 +28,9 @@ public class DoublyLinkedList {
             }
             indexNode = indexNode.nextNode;
             i += 1;
+            if (indexNode == firstNode) {
+                break;
+            }
         }
 
         return -1;
@@ -46,6 +49,9 @@ public class DoublyLinkedList {
             }
             dataNode = dataNode.nextNode;
             i += 1;
+            if (dataNode == firstNode) {
+                break;
+            }
         }
 
         return -1;
@@ -59,20 +65,25 @@ public class DoublyLinkedList {
         if (firstNode == null) {
 
             firstNode = newNode;
+            firstNode.nextNode = firstNode;
+            firstNode.previousNode = firstNode;
 
         } else {
 
             Node lastNode = firstNode;
-            while (lastNode.nextNode != null) {
+            while (lastNode.nextNode != firstNode) {
                 lastNode = lastNode.nextNode;
             }
 
             lastNode.nextNode = newNode;
             newNode.previousNode = lastNode;
 
+            newNode.nextNode = firstNode;
+            firstNode.previousNode = newNode;
+
         }
 
-        printDoublyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -82,7 +93,16 @@ public class DoublyLinkedList {
 
         if (index == 0) {
 
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
+            lastNode.nextNode = newNode;
+            newNode.previousNode = lastNode;
+
             newNode.nextNode = firstNode;
+            firstNode.previousNode = newNode;
             firstNode = newNode;
 
         } else {
@@ -105,11 +125,14 @@ public class DoublyLinkedList {
                 }
                 indexNode = indexNode.nextNode;
                 i += 1;
+                if (indexNode == firstNode) {
+                    break;
+                }
             }
 
         }
 
-        printDoublyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -117,8 +140,14 @@ public class DoublyLinkedList {
 
         if (firstNode.data == data) {
 
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
             firstNode = firstNode.nextNode;
-            firstNode.previousNode = null;
+            lastNode.nextNode = firstNode;
+            firstNode.previousNode = lastNode;
 
         } else {
 
@@ -130,19 +159,20 @@ public class DoublyLinkedList {
                     final Node postDataNode = dataNode.nextNode;
 
                     preDataNode.nextNode = postDataNode;
-                    if (postDataNode != null) {
-                        postDataNode.previousNode = preDataNode;
-                    }
+                    postDataNode.previousNode = preDataNode;
 
                     break;
 
                 }
                 dataNode = dataNode.nextNode;
+                if (dataNode == firstNode) {
+                    break;
+                }
             }
 
         }
 
-        printDoublyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -150,8 +180,14 @@ public class DoublyLinkedList {
 
         if (index == 0) {
 
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != firstNode) {
+                lastNode = lastNode.nextNode;
+            }
+
             firstNode = firstNode.nextNode;
-            firstNode.previousNode = null;
+            lastNode.nextNode = firstNode;
+            firstNode.previousNode = lastNode;
 
         } else {
 
@@ -164,18 +200,21 @@ public class DoublyLinkedList {
                     final Node postIndexNode = indexNode.nextNode;
 
                     preIndexNode.nextNode = postIndexNode;
-                    if (postIndexNode != null) {
-                        postIndexNode.previousNode = preIndexNode;
-                    }
+                    postIndexNode.previousNode = preIndexNode;
+
+                    break;
 
                 }
                 indexNode = indexNode.nextNode;
                 i += 1;
+                if (indexNode == firstNode) {
+                    break;
+                }
             }
 
         }
 
-        printDoublyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -183,7 +222,7 @@ public class DoublyLinkedList {
 
         firstNode = null;
 
-        printDoublyLinkedList();
+        printCircularDoublyLinkedList();
 
     }
 
@@ -197,6 +236,9 @@ public class DoublyLinkedList {
 
             }
             dataNode = dataNode.nextNode;
+            if (dataNode == firstNode) {
+                break;
+            }
         }
 
         return false;
@@ -211,24 +253,29 @@ public class DoublyLinkedList {
         while (node != null) {
             size += 1;
             node = node.nextNode;
+            if (node == firstNode) {
+                break;
+            }
         }
 
         return size;
 
     }
 
-    private void printDoublyLinkedList() {
+    private void printCircularDoublyLinkedList() {
 
-        String string = "null <=> ";
+        String string = "";
 
         Node node = firstNode;
         while (node != null) {
-            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + " <=> ");
+            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + (node.nextNode == firstNode ? " <=> {" + node.nextNode.data + "}" : " <=> "));
             node = node.nextNode;
+            if (node == firstNode) {
+                break;
+            }
         }
-        string += "null";
 
-        System.out.println(string);
+        System.out.println(string == "" ? "null" : string);
 
     }
 

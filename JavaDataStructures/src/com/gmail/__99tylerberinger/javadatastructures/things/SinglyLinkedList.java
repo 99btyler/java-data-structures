@@ -1,4 +1,4 @@
-package com.gmail.__99tylerberinger.javadatastructures.things.linkedlists;
+package com.gmail.__99tylerberinger.javadatastructures.things;
 
 public class SinglyLinkedList {
 

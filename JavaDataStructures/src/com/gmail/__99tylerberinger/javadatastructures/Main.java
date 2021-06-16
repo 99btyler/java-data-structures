@@ -3,10 +3,10 @@ package com.gmail.__99tylerberinger.javadatastructures;
 import com.gmail.__99tylerberinger.javadatastructures.things.BinarySearchTree;
 import com.gmail.__99tylerberinger.javadatastructures.things.Queue;
 import com.gmail.__99tylerberinger.javadatastructures.things.Stack;
-import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularDoublyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.CircularSinglyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.DoublyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.things.linkedlists.SinglyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.CircularDoublyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.CircularSinglyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.DoublyLinkedList;
+import com.gmail.__99tylerberinger.javadatastructures.things.SinglyLinkedList;
 
 public class Main {
 
