@@ -115,7 +115,7 @@ public class BinarySearchTree {
 
         printBinarySearchTree(startingNode.leftChildNode);
 
-        System.out.print(startingNode.data + " ");
+        System.out.print((startingNode.leftChildNode != null ? "{" + startingNode.leftChildNode.data + "}-" : "") + startingNode.data + (startingNode.rightChildNode != null ? "-{" + startingNode.rightChildNode.data + "} " : " "));
 
         printBinarySearchTree(startingNode.rightChildNode);
 
