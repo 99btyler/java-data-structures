@@ -1,4 +1,4 @@
-package com.gmail.__99tylerberinger.javadatastructures.things;
+package com.gmail.__99tylerberinger.javadatastructures.things.other;
 
 public class CircularSinglyLinkedList {
 
