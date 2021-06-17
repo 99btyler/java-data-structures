@@ -4,7 +4,7 @@ public class SinglyLinkedList {
 
     private class Node {
 
-        public int data;
+        public final int data;
         public Node nextNode = null;
 
         public Node(int data) {
