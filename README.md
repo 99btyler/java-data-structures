@@ -14,7 +14,12 @@ What is included
   * search(int data)
   * insert(int data)
   * delete(int data)
-* CircularDoublyLinkedList, CircularSinglyLinkedList, DoublyLinkedList, SinglyLinkedList
+* Queue
+  * peek()
+  * add(int data)
+  * pop()
+  * clear()
+* SinglyLinkedList, DoublyLinkedList, CircularSinglyLinkedList, CircularDoublyLinkedList
   * get(int index)
   * indexOf(int data)
   * add(int data)
@@ -24,11 +29,6 @@ What is included
   * clear()
   * contains(int data)
   * size()
-* Queue
-  * peek()
-  * add(int data)
-  * pop()
-  * clear()
 * Stack
   * peek()
   * push(int data)
