@@ -123,7 +123,7 @@ public class CircularSinglyLinkedList {
 
     }
 
-    public final void remove(int data) {
+    public final void removeData(int data) {
 
         if (firstNode.data == data) {
 
@@ -160,7 +160,7 @@ public class CircularSinglyLinkedList {
 
     }
 
-    public final void delete(int index) {
+    public final void removeIndex(int index) {
 
         if (index == 0) {
 

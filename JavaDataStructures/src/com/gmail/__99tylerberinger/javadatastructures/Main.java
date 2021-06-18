@@ -23,9 +23,9 @@ public class Main {
         binarySearchTree.insert(15);
         binarySearchTree.insert(40);
         binarySearchTree.search(15);
-        binarySearchTree.delete(30);
-        binarySearchTree.delete(10);
-        binarySearchTree.delete(15);
+        binarySearchTree.remove(30);
+        binarySearchTree.remove(10);
+        binarySearchTree.remove(15);
         binarySearchTree.search(9999);
 
         System.out.println("\nQueue");
@@ -45,9 +45,9 @@ public class Main {
         System.out.println("Contains 7: " + singlyLinkedList.contains(7));
         singlyLinkedList.insert(2, 1);
         System.out.println("Size: " + singlyLinkedList.size());
-        singlyLinkedList.remove(3);
+        singlyLinkedList.removeData(3);
         System.out.println("Data at index 1: " + singlyLinkedList.get(1));
-        singlyLinkedList.delete(1);
+        singlyLinkedList.removeIndex(1);
         singlyLinkedList.clear();
 
         System.out.println("\nStack");
@@ -68,8 +68,8 @@ public class Main {
         System.out.println("Data at index 1: " + doublyLinkedList.get(1));
         doublyLinkedList.insert(18, 1);
         System.out.println("Index of data 18: " + doublyLinkedList.indexOf(18));
-        doublyLinkedList.delete(doublyLinkedList.indexOf(18));
-        doublyLinkedList.remove(17);
+        doublyLinkedList.removeIndex(doublyLinkedList.indexOf(18));
+        doublyLinkedList.removeData(17);
         doublyLinkedList.clear();
 
         System.out.println("\nCircularSinglyLinkedList");
@@ -81,8 +81,8 @@ public class Main {
         circularSinglyLinkedList.insert(2021, 1);
         System.out.println("Contains 2020: " + circularSinglyLinkedList.contains(2020));
         System.out.println("Index of data 2020: " + circularSinglyLinkedList.indexOf(2020));
-        circularSinglyLinkedList.remove(2022);
-        circularSinglyLinkedList.delete(1);
+        circularSinglyLinkedList.removeData(2022);
+        circularSinglyLinkedList.removeIndex(1);
         circularSinglyLinkedList.clear();
 
         System.out.println("\nCircularDoublyLinkedList");
@@ -94,8 +94,8 @@ public class Main {
         circularDoublyLinkedList.insert(2, 1);
         System.out.println("Data at index 1: " + circularDoublyLinkedList.get(1));
         System.out.println("Size: " + circularDoublyLinkedList.size());
-        circularDoublyLinkedList.remove(2);
-        circularDoublyLinkedList.delete(0);
+        circularDoublyLinkedList.removeData(2);
+        circularDoublyLinkedList.removeIndex(0);
         circularDoublyLinkedList.clear();
 
     }

@@ -76,16 +76,16 @@ public class BinarySearchTree {
 
     }
 
-    public final void delete(int data) {
+    public final void remove(int data) {
 
-        firstNode = delete(firstNode, data);
+        firstNode = remove(firstNode, data);
 
         printBinarySearchTree();
 
     }
 
     // Recursive method
-    private Node delete(Node node, int data) {
+    private Node remove(Node node, int data) {
 
         if (node == null) {
 
@@ -94,9 +94,9 @@ public class BinarySearchTree {
         } else {
 
             if (data < node.data) {
-                node.leftChildNode = delete(node.leftChildNode, data);
+                node.leftChildNode = remove(node.leftChildNode, data);
             } else if (data > node.data) {
-                node.rightChildNode = delete(node.rightChildNode, data);
+                node.rightChildNode = remove(node.rightChildNode, data);
             } else {
 
                 // THIS IS THE NODE TO DELETE!
@@ -116,7 +116,7 @@ public class BinarySearchTree {
                     smallestData = tempNode.data;
                 }
                 node.data = smallestData;
-                node.leftChildNode = delete(node.leftChildNode, node.data);
+                node.leftChildNode = remove(node.leftChildNode, node.data);
 
             }
 
