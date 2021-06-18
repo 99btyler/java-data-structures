@@ -14,6 +14,29 @@ public class Main {
 
         System.out.println("java-data-structures");
 
+        System.out.println("\nBinarySearchTree");
+        final BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(30);
+        binarySearchTree.insert(5);
+        binarySearchTree.insert(15);
+        binarySearchTree.insert(40);
+        binarySearchTree.search(15);
+        binarySearchTree.delete(30);
+        binarySearchTree.delete(10);
+        binarySearchTree.delete(15);
+        binarySearchTree.search(9999);
+
+        System.out.println("\nQueue");
+        final Queue queue = new Queue();
+        queue.add(1);
+        queue.add(2);
+        System.out.println("Peek: " + queue.peek());
+        queue.add(3);
+        queue.pop();
+        queue.clear();
+
         System.out.println("\nSinglyLinkedList");
         final SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.add(1);
@@ -26,6 +49,15 @@ public class Main {
         System.out.println("Data at index 1: " + singlyLinkedList.get(1));
         singlyLinkedList.delete(1);
         singlyLinkedList.clear();
+
+        System.out.println("\nStack");
+        final Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        System.out.println("Peek: " + stack.peek());
+        stack.push(3);
+        stack.pop();
+        stack.clear();
 
         System.out.println("\nDoublyLinkedList");
         final DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
@@ -65,38 +97,6 @@ public class Main {
         circularDoublyLinkedList.remove(2);
         circularDoublyLinkedList.delete(0);
         circularDoublyLinkedList.clear();
-
-        System.out.println("\nStack");
-        final Stack stack = new Stack();
-        stack.push(1);
-        stack.push(2);
-        System.out.println("Peek: " + stack.peek());
-        stack.push(3);
-        stack.pop();
-        stack.clear();
-
-        System.out.println("\nQueue");
-        final Queue queue = new Queue();
-        queue.add(1);
-        queue.add(2);
-        System.out.println("Peek: " + queue.peek());
-        queue.add(3);
-        queue.pop();
-        queue.clear();
-
-        System.out.println("\nBinarySearchTree");
-        final BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.insert(20);
-        binarySearchTree.insert(10);
-        binarySearchTree.insert(30);
-        binarySearchTree.insert(5);
-        binarySearchTree.insert(15);
-        binarySearchTree.insert(40);
-        binarySearchTree.search(15);
-        binarySearchTree.delete(30);
-        binarySearchTree.delete(10);
-        binarySearchTree.delete(15);
-        binarySearchTree.search(9999);
 
     }
 
