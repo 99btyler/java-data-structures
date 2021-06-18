@@ -243,18 +243,25 @@ public class CircularSinglyLinkedList {
 
     private void printCircularSinglyLinkedList() {
 
-        String string = "";
-
         Node node  = firstNode;
-        while (node != null) {
-            string += (node.data + (node.nextNode == firstNode ? " => {" + node.nextNode.data + "}" : " => "));
-            node = node.nextNode;
-            if (node == firstNode) {
-                break;
+
+        if (node == null) {
+
+            System.out.print("null");
+
+        } else {
+
+            while (node != null) {
+                System.out.print(node.data + (node.nextNode == firstNode ? " => {" + node.nextNode.data + "}" : " => "));
+                node = node.nextNode;
+                if (node == firstNode) {
+                    break;
+                }
             }
+
         }
 
-        System.out.println(string == "" ? "null" : string);
+        System.out.println();
 
     }
 

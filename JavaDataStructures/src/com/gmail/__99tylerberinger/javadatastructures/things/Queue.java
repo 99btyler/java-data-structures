@@ -67,16 +67,13 @@ public class Queue {
 
     private void printQueue() {
 
-        String string = "";
-
         Node node = firstNode;
         while (node != null) {
-            string += (node.data + " => ");
+            System.out.print(node.data + " => ");
             node = node.nextNode;
         }
-        string += "null";
 
-        System.out.println(string);
+        System.out.println("null");
 
     }
 

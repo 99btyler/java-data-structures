@@ -219,16 +219,15 @@ public class DoublyLinkedList {
 
     private void printDoublyLinkedList() {
 
-        String string = "null <=> ";
+        System.out.print("null <=> ");
 
         Node node = firstNode;
         while (node != null) {
-            string += ((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + " <=> ");
+            System.out.print((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + " <=> ");
             node = node.nextNode;
         }
-        string += "null";
 
-        System.out.println(string);
+        System.out.println("null");
 
     }
 
