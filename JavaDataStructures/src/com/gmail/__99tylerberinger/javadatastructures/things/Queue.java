@@ -17,7 +17,9 @@ public class Queue {
     private Node lastNode = null;
 
     public final int peek() {
+
         return (firstNode != null ? firstNode.data : -1);
+
     }
 
     public final void add(int data) {
