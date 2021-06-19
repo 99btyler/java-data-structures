@@ -14,7 +14,6 @@ public class Queue {
     }
 
     private Node firstNode = null;
-    private Node lastNode = null;
 
     public final int peek() {
 
@@ -29,9 +28,13 @@ public class Queue {
         if (firstNode == null) {
 
             firstNode = newNode;
-            lastNode = newNode;
 
         } else {
+
+            Node lastNode = firstNode;
+            while (lastNode.nextNode != null) {
+                lastNode = lastNode.nextNode;
+            }
 
             lastNode.nextNode = newNode;
             lastNode = newNode;
