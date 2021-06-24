@@ -13,7 +13,23 @@ public class SinglyLinkedList {
 
     }
 
-    private Node firstNode = null;
+    private Node firstNode;
+
+    public SinglyLinkedList() {
+        firstNode = null;
+    }
+
+    private void printSinglyLinkedList() {
+
+        Node node = firstNode;
+        while (node != null) {
+            System.out.format("%d[%d] ", node.data, (node.nextNode != null ? node.nextNode.data : -1));
+            node = node.nextNode;
+        }
+
+        System.out.format("...\n");
+
+    }
 
     public final int get(int index) {
 
@@ -81,6 +97,7 @@ public class SinglyLinkedList {
         if (index == 0) {
 
             newNode.nextNode = firstNode;
+
             firstNode = newNode;
 
         } else {
@@ -201,18 +218,6 @@ public class SinglyLinkedList {
         }
 
         return size;
-
-    }
-
-    private void printSinglyLinkedList() {
-
-        Node node = firstNode;
-        while (node != null) {
-            System.out.print(node.data + " => ");
-            node = node.nextNode;
-        }
-
-        System.out.println("null");
 
     }
 

@@ -14,7 +14,23 @@ public class DoublyLinkedList {
 
     }
 
-    private Node firstNode = null;
+    private Node firstNode;
+
+    public DoublyLinkedList() {
+        firstNode = null;
+    }
+
+    private void printDoublyLinkedList() {
+
+        Node node = firstNode;
+        while (node != null) {
+            System.out.format("[%d]%d[%d] ", (node.previousNode != null ? node.previousNode.data : -1), node.data, (node.nextNode != null ? node.nextNode.data : -1));
+            node = node.nextNode;
+        }
+
+        System.out.format("...\n");
+
+    }
 
     public final int get(int index) {
 
@@ -83,6 +99,8 @@ public class DoublyLinkedList {
         if (index == 0) {
 
             newNode.nextNode = firstNode;
+            firstNode.previousNode = newNode;
+
             firstNode = newNode;
 
         } else {
@@ -168,6 +186,8 @@ public class DoublyLinkedList {
                         postIndexNode.previousNode = preIndexNode;
                     }
 
+                    break;
+
                 }
                 indexNode = indexNode.nextNode;
                 i += 1;
@@ -214,20 +234,6 @@ public class DoublyLinkedList {
         }
 
         return size;
-
-    }
-
-    private void printDoublyLinkedList() {
-
-        System.out.print("null <=> ");
-
-        Node node = firstNode;
-        while (node != null) {
-            System.out.print((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + " <=> ");
-            node = node.nextNode;
-        }
-
-        System.out.println("null");
 
     }
 

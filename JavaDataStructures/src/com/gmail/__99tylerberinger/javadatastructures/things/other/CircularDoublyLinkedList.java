@@ -14,7 +14,26 @@ public class CircularDoublyLinkedList {
 
     }
 
-    private Node firstNode = null;
+    private Node firstNode;
+
+    public CircularDoublyLinkedList() {
+        firstNode = null;
+    }
+
+    private void printCircularDoublyLinkedList() {
+
+        Node node  = firstNode;
+        while (node != null) {
+            System.out.format("[%d]%d[%d] ", (node.previousNode != null ? node.previousNode.data : -1), node.data, (node.nextNode != null ? node.nextNode.data : -1));
+            node = node.nextNode;
+            if (node == firstNode) {
+                break;
+            }
+        }
+
+        System.out.format("...\n");
+
+    }
 
     public final int get(int index) {
 
@@ -103,6 +122,7 @@ public class CircularDoublyLinkedList {
 
             newNode.nextNode = firstNode;
             firstNode.previousNode = newNode;
+
             firstNode = newNode;
 
         } else {
@@ -259,30 +279,6 @@ public class CircularDoublyLinkedList {
         }
 
         return size;
-
-    }
-
-    private void printCircularDoublyLinkedList() {
-
-        Node node = firstNode;
-
-        if (node == null) {
-
-            System.out.print("null");
-
-        } else {
-
-            while (node != null) {
-                System.out.print((node.previousNode == null ? "" : "[" + node.previousNode.data + "]") + node.data + (node.nextNode == firstNode ? " <=> {" + node.nextNode.data + "}" : " <=> "));
-                node = node.nextNode;
-                if (node == firstNode) {
-                    break;
-                }
-            }
-
-        }
-
-        System.out.println();
 
     }
 

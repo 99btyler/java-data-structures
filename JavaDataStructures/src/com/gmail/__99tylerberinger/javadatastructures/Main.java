@@ -1,19 +1,12 @@
 package com.gmail.__99tylerberinger.javadatastructures;
 
-import com.gmail.__99tylerberinger.javadatastructures.things.BinarySearchTree;
-import com.gmail.__99tylerberinger.javadatastructures.things.Queue;
-import com.gmail.__99tylerberinger.javadatastructures.things.SinglyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.things.Stack;
-import com.gmail.__99tylerberinger.javadatastructures.things.other.CircularDoublyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.things.other.CircularSinglyLinkedList;
-import com.gmail.__99tylerberinger.javadatastructures.things.other.DoublyLinkedList;
-
 public class Main {
 
     public static void main(String[] args) {
 
         System.out.println("java-data-structures");
 
+        /*
         System.out.println("\nBinarySearchTree");
         final BinarySearchTree binarySearchTree = new BinarySearchTree();
         binarySearchTree.insert(20);
@@ -27,7 +20,9 @@ public class Main {
         binarySearchTree.remove(10);
         binarySearchTree.remove(15);
         binarySearchTree.search(9999);
+        */
 
+        /*
         System.out.println("\nQueue");
         final Queue queue = new Queue();
         queue.add(1);
@@ -36,20 +31,26 @@ public class Main {
         queue.add(3);
         queue.pop();
         queue.clear();
+        */
 
+        /*
         System.out.println("\nSinglyLinkedList");
+
         final SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+
         singlyLinkedList.add(1);
         singlyLinkedList.add(3);
-        System.out.println("Index of data 3: " +  singlyLinkedList.indexOf(3));
-        System.out.println("Contains 7: " + singlyLinkedList.contains(7));
         singlyLinkedList.insert(2, 1);
         System.out.println("Size: " + singlyLinkedList.size());
+        System.out.println("Data at index 0: " + singlyLinkedList.get(0));
+        System.out.println("Index of data 3: " + singlyLinkedList.indexOf(3));
         singlyLinkedList.removeData(3);
-        System.out.println("Data at index 1: " + singlyLinkedList.get(1));
-        singlyLinkedList.removeIndex(1);
+        System.out.println("Contains data 3: " + singlyLinkedList.contains(3));
+        singlyLinkedList.removeIndex(0);
         singlyLinkedList.clear();
+        */
 
+        /*
         System.out.println("\nStack");
         final Stack stack = new Stack();
         stack.push(1);
@@ -58,45 +59,58 @@ public class Main {
         stack.push(3);
         stack.pop();
         stack.clear();
+        */
 
+        /*
         System.out.println("\nDoublyLinkedList");
+
         final DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
-        doublyLinkedList.add(17);
-        System.out.println("Contains 17: " + doublyLinkedList.contains(17));
+
+        doublyLinkedList.add(1);
+        doublyLinkedList.add(3);
+        doublyLinkedList.insert(2, 1);
         System.out.println("Size: " + doublyLinkedList.size());
-        doublyLinkedList.add(19);
-        System.out.println("Data at index 1: " + doublyLinkedList.get(1));
-        doublyLinkedList.insert(18, 1);
-        System.out.println("Index of data 18: " + doublyLinkedList.indexOf(18));
-        doublyLinkedList.removeIndex(doublyLinkedList.indexOf(18));
-        doublyLinkedList.removeData(17);
+        System.out.println("Data at index 0: " + doublyLinkedList.get(0));
+        System.out.println("Index of data 3: " + doublyLinkedList.indexOf(3));
+        doublyLinkedList.removeData(3);
+        System.out.println("Contains data 3: " + doublyLinkedList.contains(3));
+        doublyLinkedList.removeIndex(0);
         doublyLinkedList.clear();
+        */
 
+        /*
         System.out.println("\nCircularSinglyLinkedList");
-        final CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
-        circularSinglyLinkedList.add(2020);
-        System.out.println("Data at index 0: " + circularSinglyLinkedList.get(0));
-        circularSinglyLinkedList.add(2022);
-        System.out.println("Size: " + circularSinglyLinkedList.size());
-        circularSinglyLinkedList.insert(2021, 1);
-        System.out.println("Contains 2020: " + circularSinglyLinkedList.contains(2020));
-        System.out.println("Index of data 2020: " + circularSinglyLinkedList.indexOf(2020));
-        circularSinglyLinkedList.removeData(2022);
-        circularSinglyLinkedList.removeIndex(1);
-        circularSinglyLinkedList.clear();
 
+        final CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
+
+        circularSinglyLinkedList.add(1);
+        circularSinglyLinkedList.add(3);
+        circularSinglyLinkedList.insert(2, 1);
+        System.out.println("Size: " + circularSinglyLinkedList.size());
+        System.out.println("Data at index 0: " + circularSinglyLinkedList.get(0));
+        System.out.println("Index of data 3: " + circularSinglyLinkedList.indexOf(3));
+        circularSinglyLinkedList.removeData(3);
+        System.out.println("Contains data 3: " + circularSinglyLinkedList.contains(3));
+        circularSinglyLinkedList.removeIndex(0);
+        circularSinglyLinkedList.clear();
+        */
+
+        /*
         System.out.println("\nCircularDoublyLinkedList");
+
         final CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
+
         circularDoublyLinkedList.add(1);
-        System.out.println("Index of data 1: " + circularDoublyLinkedList.indexOf(1));
         circularDoublyLinkedList.add(3);
-        System.out.println("Contains 2: " + circularDoublyLinkedList.contains(2));
         circularDoublyLinkedList.insert(2, 1);
-        System.out.println("Data at index 1: " + circularDoublyLinkedList.get(1));
         System.out.println("Size: " + circularDoublyLinkedList.size());
-        circularDoublyLinkedList.removeData(2);
+        System.out.println("Data at index 0: " + circularDoublyLinkedList.get(0));
+        System.out.println("Index of data 3: " + circularDoublyLinkedList.indexOf(3));
+        circularDoublyLinkedList.removeData(3);
+        System.out.println("Contains data 3: " + circularDoublyLinkedList.contains(3));
         circularDoublyLinkedList.removeIndex(0);
         circularDoublyLinkedList.clear();
+        */
 
     }
 
