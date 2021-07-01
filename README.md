@@ -1,5 +1,5 @@
 # java-data-structures
-![java-data-structures gif](https://i.imgur.com/SVBvQdS.gif)
+![java-data-structures gif](https://i.imgur.com/7xFufIL.gif)
 
 # Getting Started
 Get this project set up locally
