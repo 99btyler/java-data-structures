@@ -13,7 +13,23 @@ public class Stack {
 
     }
 
-    private Node firstNode = null;
+    private Node firstNode;
+
+    public Stack() {
+        firstNode = null;
+    }
+
+    private void printStack() {
+
+        Node node = firstNode;
+        while (node != null) {
+            System.out.format("%d[%d] ", node.data, (node.nextNode != null ? node.nextNode.data : -1));
+            node = node.nextNode;
+        }
+
+        System.out.format("...\n");
+
+    }
 
     public final int peek() {
 
@@ -32,6 +48,7 @@ public class Stack {
         } else {
 
             newNode.nextNode = firstNode;
+
             firstNode = newNode;
 
         }
@@ -62,18 +79,6 @@ public class Stack {
         firstNode = null;
 
         printStack();
-
-    }
-
-    private void printStack() {
-
-        Node node = firstNode;
-        while (node != null) {
-            System.out.print(node.data + " => ");
-            node = node.nextNode;
-        }
-
-        System.out.println("null");
 
     }
 

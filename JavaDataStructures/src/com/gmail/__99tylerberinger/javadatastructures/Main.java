@@ -24,12 +24,14 @@ public class Main {
 
         /*
         System.out.println("\nQueue");
+
         final Queue queue = new Queue();
+
         queue.add(1);
         queue.add(2);
         System.out.println("Peek: " + queue.peek());
         queue.add(3);
-        queue.pop();
+        System.out.println("Popped: " + queue.pop());
         queue.clear();
         */
 
@@ -52,12 +54,14 @@ public class Main {
 
         /*
         System.out.println("\nStack");
+
         final Stack stack = new Stack();
+
         stack.push(1);
         stack.push(2);
         System.out.println("Peek: " + stack.peek());
         stack.push(3);
-        stack.pop();
+        System.out.println("Popped: " + stack.pop());
         stack.clear();
         */
 

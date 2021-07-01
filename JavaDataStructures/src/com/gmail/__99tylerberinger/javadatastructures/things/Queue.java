@@ -13,7 +13,23 @@ public class Queue {
 
     }
 
-    private Node firstNode = null;
+    private Node firstNode;
+
+    public Queue() {
+        firstNode = null;
+    }
+
+    private void printQueue() {
+
+        Node node = firstNode;
+        while (node != null) {
+            System.out.format("%d[%d] ", node.data, (node.nextNode != null ? node.nextNode.data : -1));
+            node = node.nextNode;
+        }
+
+        System.out.format("...\n");
+
+    }
 
     public final int peek() {
 
@@ -37,7 +53,6 @@ public class Queue {
             }
 
             lastNode.nextNode = newNode;
-            lastNode = newNode;
 
         }
 
@@ -67,18 +82,6 @@ public class Queue {
         firstNode = null;
 
         printQueue();
-
-    }
-
-    private void printQueue() {
-
-        Node node = firstNode;
-        while (node != null) {
-            System.out.print(node.data + " => ");
-            node = node.nextNode;
-        }
-
-        System.out.println("null");
 
     }
 
