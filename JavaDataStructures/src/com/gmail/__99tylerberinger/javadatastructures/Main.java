@@ -8,18 +8,17 @@ public class Main {
 
         /*
         System.out.println("\nBinarySearchTree");
+
         final BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.insert(20);
-        binarySearchTree.insert(10);
-        binarySearchTree.insert(30);
+
+        binarySearchTree.insert(4);
+        binarySearchTree.insert(2);
         binarySearchTree.insert(5);
-        binarySearchTree.insert(15);
-        binarySearchTree.insert(40);
-        binarySearchTree.search(15);
-        binarySearchTree.remove(30);
-        binarySearchTree.remove(10);
-        binarySearchTree.remove(15);
-        binarySearchTree.search(9999);
+        binarySearchTree.insert(1);
+        binarySearchTree.insert(3);
+        binarySearchTree.insert(6);
+        System.out.println("Search 3: " + binarySearchTree.search(3));
+        binarySearchTree.remove(2);
         */
 
         /*
