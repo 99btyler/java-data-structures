@@ -22,35 +22,35 @@ public class BinarySearchTree {
 
     private void printBinarySearchTree() {
 
-        printBinarySearchTree(rootNode);
+        p(rootNode);
 
         System.out.format("...\n");
 
     }
 
     // Recursive method
-    private void printBinarySearchTree(Node currentNode) {
+    private void p(Node currentNode) {
 
         if (currentNode == null) {
             return; // stop recursive calls
         }
 
-        printBinarySearchTree(currentNode.leftChildNode);
+        p(currentNode.leftChildNode);
 
         System.out.format("[%d]%d[%d] ", (currentNode.leftChildNode != null ? currentNode.leftChildNode.data : -1), currentNode.data, (currentNode.rightChildNode != null ? currentNode.rightChildNode.data : -1));
 
-        printBinarySearchTree(currentNode.rightChildNode);
+        p(currentNode.rightChildNode);
 
     }
 
     public final Node search(int data) {
 
-        return search(rootNode, data);
+        return s(rootNode, data);
 
     }
 
     // Recursive method
-    private Node search(Node currentNode, int data) {
+    private Node s(Node currentNode, int data) {
 
         if (currentNode == null || currentNode.data == data) {
 
@@ -59,9 +59,9 @@ public class BinarySearchTree {
         } else {
 
             if (data < currentNode.data) {
-                return search(currentNode.leftChildNode, data);
+                return s(currentNode.leftChildNode, data);
             } else if (data > currentNode.data) {
-                return search(currentNode.rightChildNode, data);
+                return s(currentNode.rightChildNode, data);
             }
 
             return currentNode; // stop recursive calls
@@ -72,14 +72,14 @@ public class BinarySearchTree {
 
     public final void insert(int data) {
 
-        rootNode = insert(rootNode, data);
+        rootNode = i(rootNode, data);
 
         printBinarySearchTree();
 
     }
 
     // Recursive method
-    private Node insert(Node currentNode, int data) {
+    private Node i(Node currentNode, int data) {
 
         if (currentNode == null) {
 
@@ -88,9 +88,9 @@ public class BinarySearchTree {
         } else {
 
             if (data < currentNode.data) {
-                currentNode.leftChildNode = insert(currentNode.leftChildNode, data);
+                currentNode.leftChildNode = i(currentNode.leftChildNode, data);
             } else if (data > currentNode.data) {
-                currentNode.rightChildNode = insert(currentNode.rightChildNode, data);
+                currentNode.rightChildNode = i(currentNode.rightChildNode, data);
             }
 
             return currentNode; // stop recursive calls
@@ -101,14 +101,14 @@ public class BinarySearchTree {
 
     public final void remove(int data) {
 
-        rootNode = remove(rootNode, data);
+        rootNode = r(rootNode, data);
 
         printBinarySearchTree();
 
     }
 
     // Recursive method
-    private Node remove(Node currentNode, int data) {
+    private Node r(Node currentNode, int data) {
 
         if (currentNode == null) {
 
@@ -117,9 +117,9 @@ public class BinarySearchTree {
         } else {
 
             if (data < currentNode.data) {
-                currentNode.leftChildNode = remove(currentNode.leftChildNode, data);
+                currentNode.leftChildNode = r(currentNode.leftChildNode, data);
             } else if (data > currentNode.data) {
-                currentNode.rightChildNode = remove(currentNode.rightChildNode, data);
+                currentNode.rightChildNode = r(currentNode.rightChildNode, data);
             } else {
 
                 // THIS IS THE NODE TO DELETE!
@@ -139,7 +139,7 @@ public class BinarySearchTree {
                         smallestData = node.data;
                     }
                     currentNode.data = smallestData;
-                    currentNode.leftChildNode = remove(currentNode.leftChildNode, currentNode.data);
+                    currentNode.leftChildNode = r(currentNode.leftChildNode, currentNode.data);
 
                 }
 
